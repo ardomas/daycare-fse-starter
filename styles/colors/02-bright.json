@@ -1,0 +1,63 @@
+{
+  "title": "Bright",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "background", "color": "#FFFFFF", "name": "White" },
+        { "slug": "primary", "color": "#D9D9D9", "name": "Light Gray" },
+        { "slug": "secondary", "color": "#BFBFBF", "name": "Medium Gray" },
+        { "slug": "accent", "color": "#A6A6A6", "name": "Gray Accent" },
+        { "slug": "accent-coral", "color": "#8C8C8C", "name": "Dark Accent" },
+        { "slug": "text", "color": "#333333", "name": "Text Dark" },
+        { "slug": "text-light", "color": "#666666", "name": "Text Light" },
+        { "slug": "border", "color": "#CCCCCC", "name": "Border" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "name": "Inter",
+          "slug": "inter",
+          "fontFamily": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--text)",
+      "link": "var(--wp--preset--color--primary)",
+      "linkHover": "var(--wp--preset--color--accent)",
+      "header": {
+        "background": "var(--wp--preset--color--primary)",
+        "text": "var(--wp--preset--color--background)"
+      },
+      "footer": {
+        "background": "var(--wp--preset--color--text)",
+        "text": "var(--wp--preset--color--background)"
+      },
+      "menuChild": {
+        "background": "rgba(217,217,217,0.1)",
+        "text": "var(--wp--preset--color--primary)",
+        "hoverBackground": "rgba(166,166,166,0.2)",
+        "hoverText": "var(--wp--preset--color--accent)"
+      },
+      "button": {
+        "background": "var(--wp--preset--color--primary)",
+        "text": "var(--wp--preset--color--background)",
+        "hoverBackground": "var(--wp--preset--color--accent)",
+        "hoverText": "var(--wp--preset--color--text)",
+        "disabledBackground": "rgba(217,217,217,0.3)",
+        "disabledText": "rgba(51,51,51,0.5)"
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)"
+    },
+    "spacing": {
+      "padding": "0"
+    }
+  }
+}

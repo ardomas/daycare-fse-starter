@@ -1,0 +1,63 @@
+{
+  "title": "Default",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "background", "color": "#FAF8F4", "name": "Soft Warm White" },
+        { "slug": "primary", "color": "#5DADE2", "name": "Soft Sky Blue" },
+        { "slug": "secondary", "color": "#F7DC6F", "name": "Pastel Yellow" },
+        { "slug": "accent", "color": "#F8C471", "name": "Soft Pastel Orange" },
+        { "slug": "accent-coral", "color": "#F5B7B1", "name": "Soft Coral" },
+        { "slug": "text", "color": "#2F2F2F", "name": "Text Dark" },
+        { "slug": "text-light", "color": "#6E6E6E", "name": "Text Gray" },
+        { "slug": "border", "color": "#E4E4E4", "name": "Border" }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "name": "Inter",
+          "slug": "inter",
+          "fontFamily": "'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "var(--wp--preset--color--background)",
+      "text": "var(--wp--preset--color--text)",
+      "link": "var(--wp--preset--color--primary)",
+      "linkHover": "var(--wp--preset--color--accent)",
+      "header": {
+        "background": "var(--wp--preset--color--primary)",
+        "text": "var(--wp--preset--color--background)"
+      },
+      "footer": {
+        "background": "var(--wp--preset--color--text)",
+        "text": "var(--wp--preset--color--background)"
+      },
+      "menuChild": {
+        "background": "rgba(93, 173, 226, 0.1)",
+        "text": "var(--wp--preset--color--primary)",
+        "hoverBackground": "rgba(248, 196, 113, 0.2)",
+        "hoverText": "var(--wp--preset--color--accent)"
+      },
+      "button": {
+        "background": "var(--wp--preset--color--primary)",
+        "text": "var(--wp--preset--color--background)",
+        "hoverBackground": "var(--wp--preset--color--accent)",
+        "hoverText": "var(--wp--preset--color--text)",
+        "disabledBackground": "rgba(93,173,226,0.3)",
+        "disabledText": "rgba(47,47,47,0.5)"
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--inter)"
+    },
+    "spacing": {
+      "padding": "0"
+    }
+  }
+}
