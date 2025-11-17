@@ -49,11 +49,159 @@ function daycare_colors_page() {
         <h1>Theme Colors</h1>
         <form method="post">
             <?php wp_nonce_field('daycare_colors_save', 'daycare_colors_nonce'); ?>
+
+            <?php
+/* */
+?>
+                        <div class="theme-colors-main-block">
+                            <div style="width: 100%; display: flex;">
+                                <div style="width: 20%; display: block;">Page</div>
+                                <div style="width: 80%; display: block;">
+                                    <div style="width: 100%; display: block;">
+                                    </div>
+                                    <div style="width: 100%; display: flex;">
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Background</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Text</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Primary</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Accent</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <div style="width: 20%; diwplay: block;">Link Text</div>
+                                <div style="width: 80%; display; block;">
+                                    <div style="width: 100%; display: flex;">
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Link Text</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Link Text Hover</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <div style="width: 20%; diwplay: block;">Button</div>
+                                <div style="width: 80%; display; block;">
+                                    <div style="width: 100%; display: flex;">
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Background</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Text</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <div style="width: 20%; diwplay: block;">Button Hover</div>
+                                <div style="width: 80%; display; block;">
+                                    <div style="width: 100%; display: flex;">
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Background</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Text</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <div style="width: 20%; diwplay: block;">Header</div>
+                                <div style="width: 80%; display; block;">
+                                    <div style="width: 100%; display: flex;">
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Background</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Text</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; display: flex;">
+                                <div style="width: 20%; diwplay: block;">Footer</div>
+                                <div style="width: 80%; display; block;">
+                                    <div style="width: 100%; display: flex;">
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Background</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                        <div style="width: 20%; display: block;">
+                                            <div style="display: block;">Text</div>
+                                            <div style="display: block;">[kode]</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>Page</td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td>Background</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Text</td>
+                                                <td>Primary</td>
+                                                <td>Accent</td>
+                                                <td>Link Text</td>
+                                                <td>Link Text Hover</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Button</td>
+                                    <td>
+                                        <table>
+                                            <tr>
+                                                <td colspan="2">Normal</td>
+                                                <td colspan="2">Hover</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Background</td>
+                                                <td>Text</td>
+                                                <td>Background</td>
+                                                <td>Text</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+<?php
+/* */
+?>
             <table class="form-table">
                 <tr>
-                    <td>
+                    <td style="width: 30%; min-width: 250px;">
+
                         <table>
-                            <?php foreach ($colors as $key => $value): ?>
+                            <?php 
+                            // print_r( $colors );
+                            foreach ($colors as $key => $value): ?>
                                 <tr>
                                     <th scope="row">
                                         <label for="<?php echo esc_attr($key); ?>"><?php echo ucwords(str_replace('_',' ', $key)); ?></label>
@@ -65,12 +213,16 @@ function daycare_colors_page() {
                             <?php endforeach; ?>
                         </table>
                     </td>
-                    <td>
-                        <div id="daycare-color-preview">
-                            <h2>Preview Header</h2>
-                            <p>This is some sample text. <a href="#">Sample Link</a></p>
-                            <button>Sample Button</button>
-                            <footer>Preview Footer</footer>
+                    <td style="vertical-align: top;">
+                        <div style="display: block; position: sticky; top: 0px; padding-top: 25px;">
+                            <div id="daycare-color-preview">
+                                <h2>Preview Header</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>This is some sample text. <a href="#">Sample Link</a></p>
+                                <button>Sample Button</button>
+                                <footer>Preview Footer</footer>
+                            </div>
+
                         </div>
                     </td>
                 </tr>
