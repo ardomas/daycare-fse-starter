@@ -23,7 +23,7 @@ $color_groups = [
         'fields' => [
             ['key' => 'button_background', 'label' => 'Background', 'default' => '#5DADE2'],
             ['key' => 'button_text', 'label' => 'Text', 'default' => '#FAF8F4'],
-            ['key' => 'button_hover_background', 'label' => 'Hover (BG)', 'default' => '#F7DC6F'],
+            ['key' => 'button_hover_background', 'label' => 'Hover Background', 'default' => '#F7DC6F'],
             ['key' => 'button_hover_text', 'label' => 'Hover (Text)', 'default' => '#2F2F2F'],
         ],
     ],

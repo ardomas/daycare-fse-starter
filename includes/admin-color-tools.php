@@ -55,7 +55,7 @@ function daycare_colors_page() {
 
             <table class="form-table">
                 <tr>
-                    <td style="width: 30%; min-width: 250px;">
+                    <td style="width: 60%;">
 
                         <?php foreach ($color_groups as $group) { ?>
 
@@ -67,9 +67,9 @@ function daycare_colors_page() {
 
                                         $value = $colors[$field['key']] ?? $field['default'];
 
-                                        echo "<div class='color-item'>";
+                                        echo "<div class='color-item' style='width: 25%;'>";
                                         echo "<label for='{$field['key']}' style='display: block;'>{$field['label']}</label>";
-                                        echo "<div style='width: 20%; display: block;'>";
+                                        echo "<div style='display: block;'>";
                                         echo "<input type='text' id='{$field['key']}' name='{$field['key']}' value='{$value}' class='wp-color-picker-field' data-default-color='{$field['default']}'>";
                                         echo "</div>";
                                         echo "</div>";
