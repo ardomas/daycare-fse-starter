@@ -22,7 +22,10 @@ add_action('admin_menu', function() {
 // ---------------------------
 // 2. Render halaman admin
 // ---------------------------
+require_once get_template_directory() . '/includes/config-color-groups.php';
 function daycare_colors_page() {
+    global $color_groups;
+
     if (!current_user_can('manage_options')) return;
 
     $site_id = get_current_blog_id();
@@ -50,168 +53,34 @@ function daycare_colors_page() {
         <form method="post">
             <?php wp_nonce_field('daycare_colors_save', 'daycare_colors_nonce'); ?>
 
-            <?php
-/* */
-?>
-                        <div class="theme-colors-main-block">
-                            <div style="width: 100%; display: flex;">
-                                <div style="width: 20%; display: block;">Page</div>
-                                <div style="width: 80%; display: block;">
-                                    <div style="width: 100%; display: block;">
-                                    </div>
-                                    <div style="width: 100%; display: flex;">
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Background</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Text</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Primary</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Accent</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; display: flex;">
-                                <div style="width: 20%; diwplay: block;">Link Text</div>
-                                <div style="width: 80%; display; block;">
-                                    <div style="width: 100%; display: flex;">
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Link Text</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Link Text Hover</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; display: flex;">
-                                <div style="width: 20%; diwplay: block;">Button</div>
-                                <div style="width: 80%; display; block;">
-                                    <div style="width: 100%; display: flex;">
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Background</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Text</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; display: flex;">
-                                <div style="width: 20%; diwplay: block;">Button Hover</div>
-                                <div style="width: 80%; display; block;">
-                                    <div style="width: 100%; display: flex;">
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Background</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Text</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; display: flex;">
-                                <div style="width: 20%; diwplay: block;">Header</div>
-                                <div style="width: 80%; display; block;">
-                                    <div style="width: 100%; display: flex;">
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Background</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Text</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div style="width: 100%; display: flex;">
-                                <div style="width: 20%; diwplay: block;">Footer</div>
-                                <div style="width: 80%; display; block;">
-                                    <div style="width: 100%; display: flex;">
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Background</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                        <div style="width: 20%; display: block;">
-                                            <div style="display: block;">Text</div>
-                                            <div style="display: block;">[kode]</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <table>
-                                <tr>
-                                    <td>Page</td>
-                                    <td>
-                                        <table>
-                                            <tr>
-                                                <td>Background</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Text</td>
-                                                <td>Primary</td>
-                                                <td>Accent</td>
-                                                <td>Link Text</td>
-                                                <td>Link Text Hover</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Button</td>
-                                    <td>
-                                        <table>
-                                            <tr>
-                                                <td colspan="2">Normal</td>
-                                                <td colspan="2">Hover</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Background</td>
-                                                <td>Text</td>
-                                                <td>Background</td>
-                                                <td>Text</td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-<?php
-/* */
-?>
             <table class="form-table">
                 <tr>
                     <td style="width: 30%; min-width: 250px;">
 
-                        <table>
-                            <?php 
-                            // print_r( $colors );
-                            foreach ($colors as $key => $value): ?>
-                                <tr>
-                                    <th scope="row">
-                                        <label for="<?php echo esc_attr($key); ?>"><?php echo ucwords(str_replace('_',' ', $key)); ?></label>
-                                    </th>
-                                    <td>
-                                        <input type="text" id="<?php echo esc_attr($key); ?>" name="<?php echo esc_attr($key); ?>" value="<?php echo esc_attr($value); ?>" class="wp-color-picker-field" data-default-color="<?php echo esc_attr($value); ?>">
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </table>
+                        <?php foreach ($color_groups as $group) { ?>
+
+                            <div class='color-group'>
+                                <h3><?php echo "{$group['group_label']}"; ?></h3>
+                                <div style='width: 100%; display: flex;'>
+<?php 
+                                    foreach ($group['fields'] as $field) { 
+
+                                        $value = $colors[$field['key']] ?? $field['default'];
+
+                                        echo "<div class='color-item'>";
+                                        echo "<label for='{$field['key']}' style='display: block;'>{$field['label']}</label>";
+                                        echo "<div style='width: 20%; display: block;'>";
+                                        echo "<input type='text' id='{$field['key']}' name='{$field['key']}' value='{$value}' class='wp-color-picker-field' data-default-color='{$field['default']}'>";
+                                        echo "</div>";
+                                        echo "</div>";
+
+                                    }
+?>
+                                </div>
+                            </div>
+
+                        <?php } ?>
+
                     </td>
                     <td style="vertical-align: top;">
                         <div style="display: block; position: sticky; top: 0px; padding-top: 25px;">
